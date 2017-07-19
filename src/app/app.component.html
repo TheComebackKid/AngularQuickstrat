@@ -1,6 +1,19 @@
+<!--
 <h1>Hello Angular!</h1>
 <nav>
 <a routerLink="/one">Routing One</a>
 <a routerLink="/two">Routing Two</a>
 </nav>
 <router-outlet></router-outlet>
+-->
+<h1>Solar System!</h1>
+<ul>
+    <li *ngFor="let planet of planets">
+        {{planet.name}}
+    </li>
+</ul>
+<form>
+    <label for="planetName">Enter planet name</label>
+    <input type="text" name="planetName" [(ngModel)]="currentPlanet.name">
+    <button (click)="save()">Add</button>
+</form>

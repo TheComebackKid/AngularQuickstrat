@@ -1,0 +1,44 @@
+<!--
+<button (click)="toggleThingy()"> Toggle the Thingy!</button>
+<h1 *ngIf="isShown">thingy</h1>
+-->
+<!--
+<br>
+<br>
+<br>
+<label>Select Language</label>
+<select [(ngModel)] = "language">
+    <!-- <option value="en">English</option>
+    <option value="jp">Japanese</option>
+    <option value="kr">Korean</option> 
+    <option *ngFor="let lang of languages" [value] = "lang.code"> {{lang.name}}</option>
+</select>
+<div [ngSwitch] = "language">
+    <h1 *ngSwitchCase="'en'">Good Morning!</h1>
+    <h1 *ngSwitchCase="'jp'">Ohayou Gozaimasu</h1>
+    <h1 *ngSwitchCase="'kr'">Annyeonghaseyo</h1>
+    <h1 *ngSwitchDefault>Dunno</h1>
+</div>
+<br>
+<br>
+-->
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<h3>Add Contact</h3>
+<form>
+    <div><label>Name</label> <input type="text" name="name" [(ngModel)]="currentContact.name"></div> 
+    <div><label>Email</label> <input type="text" name="email" [(ngModel)]="currentContact.email"></div>
+    <button (click)="save()" [disabled]="!isValid()">Save</button>
+</form>

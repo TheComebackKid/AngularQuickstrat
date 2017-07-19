@@ -1,0 +1,13 @@
+<!-- Interpolation Sample -->
+<h1> Hello {{name}} </h1>
+
+<!-- Property (Class) Binding and Interpolation Sample -->
+<!-- <p [class]="myNumber < 0 ? 'negative' : ''">Your number is {{myNumber}}</p> -->
+<!-- <p [class.negative]="myNumber < 0 " [class.positive]="myNumber > 0">Your number is {{myNumber}}</p> -->
+
+<!-- ngClass Sample -->
+<!-- <p [ngClass]="{negative: myNumber < 0, positive: myNumber > 0}">Your number is {{myNumber}}</p> -->
+<p [ngClass]="getClasses()">Your number is {{myNumber}}</p>
+
+<!-- 2 Way Binding and Event Binding Sample -->
+<input type="text" [(ngModel)] = "myNumber" /> <button (click)="showMyNumber()">Show My Number</button>
